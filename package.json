@@ -1,0 +1,11 @@
+{
+  "name": "ged-www",
+  "version": "1.0.0",
+  "description": "Code Challenge for GE Digital",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephanie Connelly",
+  "license": "ISC"
+}
