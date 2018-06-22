@@ -37,7 +37,6 @@ function handleFile(err, data) {
     // console.log('results.success.includes(address)', results.success.includes(address.links))
 
     const mappingThrough = address.links.map((item)=> {
-      console.log(item)
       if (results.success.includes(item)){
         results.skipped.push(item)
       } else {
