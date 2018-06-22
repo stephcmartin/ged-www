@@ -7,7 +7,7 @@ fs.readFile('./src/internet1.json', handleFile)
 // Write the callback function
 function handleFile(err, data) {
   if (err) throw err
-    // internet is now the entire JSON object
+  // internet is now the entire JSON object
   let internet = JSON.parse(data)
 
   // Initialize empty object to hold data
@@ -18,7 +18,6 @@ function handleFile(err, data) {
   }
 
   // Write a function that lists obj.pages[i].address as 'success'
-
   const succesfulCrawls = internet.pages.map((address) => {
     results.success.push(address.address)
   })
@@ -38,4 +37,20 @@ function handleFile(err, data) {
     })
   })
   console.log(results)
+
+  // this finds the duplicate in the skipped array
+  function findDuplicateInArray(arr) {
+    var i,
+      len = arr.length,
+      result = [],
+      obj = {};
+    for (i = 0; i < len; i++) {
+      obj[arr[i]] = 0;
+    }
+    for (i in obj) {
+      result.push(i);
+    }
+    return result;
+  }
+  console.log(findDuplicateInArray(results.skipped));
 }
