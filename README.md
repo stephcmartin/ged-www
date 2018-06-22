@@ -5,8 +5,7 @@ For the purposes of this project, I have defined the Internet as the test data i
 
 Based on the notes that were given to me I have the following assumtpion:
 
-- Each link in ```internet.pages.address``` will always be a successful crawl,
-- i.e will go into the 'results.sucess' array
+- Each link in ```internet.pages.address``` will always be a successful crawl, i.e will go into the 'results.sucess' array
 - Any repeates beteen ```internet.pages.address``` and ```internet.pages.links``` will be counted as a skip and go into the 'results.skipped' array
 - Anything else will be counted as an error and will be 'results.error'
 

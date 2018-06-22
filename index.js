@@ -17,6 +17,20 @@ function handleFile(err, data) {
     "error": []
   }
 
+  // this finds the duplicate in the skipped array
+  function findDuplicateInArray(arr) {
+    var i,
+      result = [],
+      obj = {};
+    for (i = 0; i < arr.length; i++) {
+      obj[arr[i]] = 0;
+    }
+    for (i in obj) {
+      result.push(i);
+    }
+    return result;
+  }
+
   // Write a function that lists obj.pages[i].address as 'success'
   const succesfulCrawls = internet.pages.map((address) => {
     results.success.push(address.address)
@@ -37,20 +51,5 @@ function handleFile(err, data) {
     })
   })
   console.log(results)
-
-  // this finds the duplicate in the skipped array
-  function findDuplicateInArray(arr) {
-    var i,
-      len = arr.length,
-      result = [],
-      obj = {};
-    for (i = 0; i < len; i++) {
-      obj[arr[i]] = 0;
-    }
-    for (i in obj) {
-      result.push(i);
-    }
-    return result;
-  }
-  console.log(findDuplicateInArray(results.skipped));
+  console.log(findDuplicateInArray(results.skipped))
 }
