@@ -7,9 +7,8 @@ fs.readFile('./src/internet1.json', handleFile)
 // Write the callback function
 function handleFile(err, data) {
   if (err) throw err
+    // internet is now the entire JSON object
   let internet = JSON.parse(data)
-
-  // internet is now the entire json object
 
   // Initialize empty object to hold data
   let results = {
@@ -26,7 +25,6 @@ function handleFile(err, data) {
 
   // Write a function that will check if it needs to be skipped.
   // Remember: if the address is already in success array, we add it to skip.
-
   const checkAddress = internet.pages.map((address) => {
     // This function maps through all the internet.pages.links
     const mappingThrough = address.links.map((item) => {
@@ -39,7 +37,5 @@ function handleFile(err, data) {
       }
     })
   })
-
   console.log(results)
-
 }
