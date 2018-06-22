@@ -18,8 +18,6 @@ function handleFile(err, data) {
     "error": []
   }
 
-  let crawls =[]
-
   // First: Write a function that lists obj.pages[i].address as 'success'
 
   const succesfulCrawls = internet.pages.map((address) => {
