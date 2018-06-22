@@ -7,7 +7,7 @@ Based on the notes that were given to me I have the following assumtpion:
 
 - Each object of```pages.address``` will always be a successful crawl, i.e will go into the 'sucess' bucket
 - any repeates beteen *all* the objects ```pages.links``` of the entire json will be counted as a skip
-- any ```pages.address``` or ```pages.links``` with the string 'http://foo.bar.com/p3' or 'http://foo.bar.com/p7' will be an error
+- any ```pages.address``` or ```pages.links``` not in internet will be an error
 
 ### The expected output of internet1.json is:
 
