@@ -29,3 +29,8 @@ Skipped: ["http://foo.bar.com/p1"]
 
 Error: []
 ```
+## To Run Application:
+
+Type in terminal:
+
+```node index.js```
